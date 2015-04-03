@@ -1,42 +1,77 @@
 var bio = {
-    name: "Condor Hero",
-    role: "Enthusiast",
-    contact_info: "duncan.chia@gmail.com",
-    pic_url: "images/fry.jpg",
-    welcome_msg: "konnichiwa",
-    skills: ["SAP","Web Dev"],
-}
+    "name": "Condor Hero",
+    "role": "Enthusiast",
+    "contacts": {
+        "mobile": "+60 16-271 1285",
+        "email" : "condorhero@gmail.com",
+        "github": "yangkuo",
+        "twittr": "yangkuo",
+        "locatn": "Kuala Lumpur"
+    },
+    "bio_pic": "images/fry.jpg",
+    "welcome_msg": "konnichiwa",
+    "skills": ["SAP", "Web Dev"]
+};
 
-var work = {};
-work.position = "Trainer";
-work.employer = "XXX";
-work.years = 0.3;
-
-var education = {
-  schools: [ 
-      { name: "UXX", major: ["BSc Computing","Psychology"] },
-      { name: "UYY", major: ["MSc IT"] }
-  ]
+var work = {
+    "jobs": [
+        { 
+            "employer": "Axon",
+            "title": "Training Instructor",
+            "location": "KL",
+            "dates_worked": "2005-2014",
+            "description": "...."
+        },
+        { 
+            "employer": "Druid",
+            "title": "Tech Consultant",
+            "location": "KL",
+            "dates_worked": "1998-2002",
+            "description": "...."
+        }
+    ]
 };
 
 
-var formattedName = HTMLheaderName.replace("%data%",bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%",bio.pic_url);
-var fmtWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcome_msg);
+var projects = {
+    "proj": [
+        {
+            "title": "HANA Academy",
+            "dates_worked": "2015",
+            "description": "....",
+            "images": [
+                "http://example.com/proj1/img01.jpg",
+                "http://example.com/proj1/img02.jpg"
+            ]
+        }
+    ]
+};
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#main").append(formattedBioPic);
-$("#main").append(bio.contact_info);
-$("#main").append(fmtWelcomeMsg);
 
-$("#main").append(HTMLskillsStart);
-// TODO - replace with loop
-var fmtSkills = HTMLskills.replace("%data%", bio.skills[0]);
-$("#main").append(fmtSkills);
-fmtSkills = HTMLskills.replace("%data%", bio.skills[1]);
-$("#main").append(fmtSkills);
-
-$("#main").append(work.position);
-$("#main").append(education.schools[0].name);
+var education = {
+    "schools": [
+        {
+            "name": "School 1",
+            "major": [
+                "BSc Computing",
+                "Psychology"
+            ]
+        },
+        {
+            "name": "School 2",
+            "major": [
+                "MSc IT"
+            ]
+        }
+    ],
+    "onlineCourses": [
+        {
+            "provider": "openSAP",
+            "course": "BW on HANA"
+        },
+        {
+            "provider": "Udacity",
+            "course": "Intro to JS"
+        }
+    ]
+};
